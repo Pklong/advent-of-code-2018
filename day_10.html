@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <main>
+      <canvas></canvas>
+    </main>
+    <script src="./day_10.js"></script>
+    <script>
+     const lines = window.input_file.split('\n')
+     const positions = lines.map(l => l.split(',').map(Number))
+     const canvas = document.querySelector('canvas')
+     const ctx = canvas.getContext('2d')
+     positions.forEach(pos => {
+       const [x, y] = pos
+       ctx.fillRect(x, y, 1, 1)
+     })
+     
+    </script>
+  </body>
+</html>
